@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 
 test('Update Profile', async({page}) =>{
   await page.goto("https://www.naukri.com/");
-  await page.locator("#login_Layer").click();
+  await page.locator("//a[@id='login_Layer']").click();
   await page.locator("//label[contains(text(),'Username')]/following-sibling::input").fill("renukashivanioffc@gmail.com");
   await page.locator("//label[contains(text(),'Password')]/following-sibling::input").fill("Renu@1106");
   await page.locator("//button[text()='Login']").click();
